@@ -52,17 +52,17 @@ export class Board extends React.Component {
 		 * if one of them has the same pattern, I will declare the current player the winner
 		 */
 
-		winningCombinations.forEach(winningPattern => {
-			console.log(
-				"Checkinng if the current board matches the winnig pattern: ",
-				winningPattern
-			);
-			var winner = this.checkWinningPattern(
-				winningPattern,
-				currentSquareValues
+		winningCombinations.forEach(winningCombo => {
+			// console.log(
+			// 	"Checkinng if the current board matches the winnig pattern: ",
+			// 	winningPattern
+			// );
+			var winner = this.checkWinningCombo(
+				winningCombo, //each one of the winning combinations
+				currentSquareValues //the newSquareValues from 15
 			);
 			if (winner != null) {
-				console.log("We have a winner and is: " + winner);
+				// console.log("We have a winner and is: " + winner);
 				this.props.onWinner(this.props.currentPlayer);
 			}
 		});
@@ -70,17 +70,17 @@ export class Board extends React.Component {
 		return null;
 	}
 
-	checkWinningPattern(winningPattern, currentSquareValues) {
+	checkWinningCombo(winningCombo, currentSquareValues) {
 		var successfullMatches = 0;
-		for (var i = 0; i < winningPattern.length; i++) {
-			if (winningPattern[i] == 1) {
+		for (var i = 0; i < winningCombo.length; i++) {
+			if (winningCombo[i] == 1) {
 				if (currentSquareValues[i] == this.props.currentPlayer) {
 					successfullMatches++;
-					console.log(
-						successfullMatches +
-							" successfull match found for " +
-							this.props.currentPlayer
-					);
+					// console.log(
+					// 	successfullMatches +
+					// 		" successfull match found for " +
+					// 		this.props.currentPlayer
+					// );
 					if (successfullMatches > 2) {
 						return this.props.currentPlayer;
 					}
@@ -154,7 +154,7 @@ export class Board extends React.Component {
 
 Board.propTypes = {
 	hide: PropTypes.bool,
-	currentPlayer: PropTypes.object,
+	currentPlayer: PropTypes.string,
 	onMove: PropTypes.func,
 	onWinner: PropTypes.func
 };
