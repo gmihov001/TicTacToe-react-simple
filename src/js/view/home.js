@@ -56,10 +56,12 @@ export class Home extends React.Component {
 				return (
 					<div>
 						<h1 style={{ color: "green" }}>
-							{this.state.winner} Wins!
+							{this.state.winner.toUpperCase()} WINS!!!
 						</h1>
-						<button onClick={this.startGame.bind(this)}>
-							Start Over
+						<button
+							style={{ background: "green" }}
+							onClick={this.startGame.bind(this)}>
+							Start Over!
 						</button>
 					</div>
 				);

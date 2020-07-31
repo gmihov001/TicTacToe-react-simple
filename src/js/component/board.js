@@ -21,7 +21,7 @@ export class Board extends React.Component {
 			squareValues: newSquareValues
 		});
 		this.props.onMove(squarePressed);
-		var winner = this.checkForWinner(newSquareValues);
+		this.checkForWinner(newSquareValues);
 	}
 
 	checkForWinner(currentSquareValues) {
@@ -64,6 +64,9 @@ export class Board extends React.Component {
 			if (winner != null) {
 				// console.log("We have a winner and is: " + winner);
 				this.props.onWinner(this.props.currentPlayer);
+				this.setState({
+					squareValues: ["", "", "", "", "", "", "", "", ""]
+				});
 			}
 		});
 
