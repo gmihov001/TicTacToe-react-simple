@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Board } from "../component/board.js";
 import { ChoosePlayer } from "../component/chooseplayer.js";
 
