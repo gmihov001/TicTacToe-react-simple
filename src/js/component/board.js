@@ -41,7 +41,7 @@ export class Board extends React.Component {
 
 			[0, 0, 1, 0, 0, 1, 0, 0, 1],
 
-			//horizontal straight lines
+			//diagonal straight lines
 			[1, 0, 0, 0, 1, 0, 0, 0, 1],
 
 			[0, 0, 1, 0, 1, 0, 1, 0, 0]
