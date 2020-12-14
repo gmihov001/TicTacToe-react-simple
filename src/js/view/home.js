@@ -17,20 +17,20 @@ export class Home extends React.Component {
 		this.setState({ player: null });
 	};
 
-	setTurn(currentPlayer, player1, player2) {
+	setTurn = (currentPlayer, player1, player2) => {
 		this.setState({
 			player: currentPlayer,
 			player1: player1,
 			player2: player2
 		});
-	}
+	};
 
-	nextMove(position) {
+	nextMove = position => {
 		console.log("Next move at position: ", position);
 		this.setState({
 			player: this.state.player == "x" ? "o" : "x"
 		});
-	}
+	};
 
 	declareWinner(winner) {
 		this.setState({
