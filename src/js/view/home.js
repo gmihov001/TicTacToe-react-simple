@@ -12,10 +12,10 @@ export class Home extends React.Component {
 		};
 	}
 
-	startGame() {
+	startGame = () => {
 		console.log("Start Game");
 		this.setState({ player: null });
-	}
+	};
 
 	setTurn(currentPlayer, player1, player2) {
 		this.setState({
