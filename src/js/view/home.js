@@ -80,12 +80,12 @@ export class Home extends React.Component {
 				{this.renderMessage()}
 				<Board
 					currentPlayer={this.state.player}
-					onMove={this.nextMove.bind(this)}
-					onWinner={this.declareWinner.bind(this)}
+					onMove={this.nextMove}
+					onWinner={this.declareWinner}
 				/>
 				<ChoosePlayer
 					hide={this.state.player == null ? true : false}
-					onSetTurn={this.setTurn.bind(this)}
+					onSetTurn={this.setTurn}
 				/>
 			</div>
 		);
