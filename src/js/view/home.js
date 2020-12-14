@@ -46,7 +46,9 @@ export class Home extends React.Component {
 				return (
 					<div>
 						<h2>It is {this.state.player.toUpperCase()} turn!</h2>
-						<button onClick={this.startGame.bind(this)}>
+						<button
+							className="btn btn-lg btn-secondary"
+							onClick={this.startGame.bind(this)}>
 							Start Over
 						</button>
 					</div>
