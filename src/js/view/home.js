@@ -60,6 +60,7 @@ export class Home extends React.Component {
 							{this.state.winner.toUpperCase()} WINS!!!
 						</h1>
 						<button
+							className="btn btn-lg btn-success"
 							style={{ background: "green" }}
 							onClick={this.startGame.bind(this)}>
 							Start Over!
