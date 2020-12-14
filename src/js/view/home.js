@@ -62,7 +62,7 @@ export class Home extends React.Component {
 						<button
 							className="btn btn-lg btn-success"
 							style={{ background: "green" }}
-							onClick={this.startGame.bind(this)}>
+							onClick={this.startGame}>
 							Start Over!
 						</button>
 					</div>
