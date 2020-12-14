@@ -32,13 +32,13 @@ export class Home extends React.Component {
 		});
 	};
 
-	declareWinner(winner) {
+	declareWinner = winner => {
 		this.setState({
 			winner: winner
 		});
-	}
+	};
 
-	renderMessage() {
+	renderMessage = () => {
 		if (this.state.player == null) {
 			return <h2 id="message">Pick A Weapon</h2>;
 		} else {
@@ -48,7 +48,7 @@ export class Home extends React.Component {
 						<h2>It is {this.state.player.toUpperCase()} turn!</h2>
 						<button
 							className="btn btn-lg btn-secondary"
-							onClick={this.startGame.bind(this)}>
+							onClick={this.startGame}>
 							Start Over
 						</button>
 					</div>
@@ -69,7 +69,7 @@ export class Home extends React.Component {
 				);
 			}
 		}
-	}
+	};
 
 	render() {
 		return (
