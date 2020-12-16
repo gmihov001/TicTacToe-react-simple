@@ -21,10 +21,12 @@ export class Board extends React.Component {
 			squareValues: newSquareValues
 		});
 		this.props.onMove(squarePressed);
-        this.checkForWinner(newSquareValues);
-        if(!newSquareValues.includes("")){
-            this.setState({ squareValues: ["", "", "", "", "", "", "", "", ""] });
-        }
+		this.checkForWinner(newSquareValues);
+		if (!newSquareValues.includes("")) {
+			this.setState({
+				squareValues: ["", "", "", "", "", "", "", "", ""]
+			});
+		}
 	};
 
 	checkForWinner(currentSquareValues) {

@@ -48,7 +48,7 @@ export class Home extends React.Component {
 						<h2>It is {this.state.player.toUpperCase()} turn!</h2>
 						<button
 							className="btn btn-lg btn-secondary"
-							onClick={this.startGame}>
+							onClick={this.startOver}>
 							Start Over
 						</button>
 					</div>
@@ -62,7 +62,7 @@ export class Home extends React.Component {
 						<button
 							className="btn btn-lg btn-success"
 							style={{ background: "green" }}
-							onClick={this.startGame}>
+							onClick={this.startOver}>
 							Start Over!
 						</button>
 					</div>
