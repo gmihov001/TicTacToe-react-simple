@@ -11,7 +11,7 @@ export class Board extends React.Component {
 		};
 	}
 
-	updateNextMove(squarePressed) {
+	updateNextMove = squarePressed => {
 		var newSquareValues = this.state.squareValues.map(
 			(item, position) =>
 				position == squarePressed ? this.props.currentPlayer : item
@@ -21,8 +21,11 @@ export class Board extends React.Component {
 			squareValues: newSquareValues
 		});
 		this.props.onMove(squarePressed);
-		this.checkForWinner(newSquareValues);
-	}
+        this.checkForWinner(newSquareValues);
+        if(!newSquareValues.includes("")){
+            this.setState({ squareValues: ["", "", "", "", "", "", "", "", ""] });
+        }
+	};
 
 	checkForWinner(currentSquareValues) {
 		//all the possible winning patterns in 3x3 tictactoe
